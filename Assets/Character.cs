@@ -9,17 +9,17 @@ public class Character : MonoBehaviour
     [SerializeField] private float _moveSpeed;
     [SerializeField] private float _rotateSpeed;
     private Vector3 _direction;
-    private CinemachineVirtualCamera _vcam;
-    private GameObject[] _vcams;
+   // private CinemachineVirtualCamera _vcam;
+    //private GameObject[] _vcams;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        _vcam = GetComponent<CinemachineVirtualCamera>();
+        /* _vcam = GetComponent<CinemachineVirtualCamera>();
         _vcams = GameObject.FindGameObjectsWithTag("VCamera");
         _vcams[0].SetActive(false);
-
+ */
     }
 
     // Update is called once per frame
@@ -34,10 +34,10 @@ public class Character : MonoBehaviour
         Vector3 rotation = new Vector3(0, _horizontal * _rotateSpeed * Time.deltaTime, 0);
         this.transform.Rotate(rotation);
 
-       ActivateOrbitalCam();
+       //ActivateOrbitalCam();
     }
 
-    void ActivateOrbitalCam()
+   /*  void ActivateOrbitalCam()
     {
         if (Input.GetMouseButtonDown(1))
         {
@@ -47,5 +47,5 @@ public class Character : MonoBehaviour
         {
             _vcams[0].SetActive(false);
         }
-    }
+    }*/
 }
